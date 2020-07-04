@@ -1,0 +1,20 @@
+{
+    "en": {
+        "tradingMenu": "//span[contains(text(),'Trading')]",
+        "orderFulfilment": "//ul//a[@title='Fulfilment']",
+        "createOrderBtn": "//a[@title='Create order']",
+        "importBtn": "//a[contains(text(),'Import')]",
+        "exportToExcelBtn": "//button[contains(text(),'Export to excel')]",
+        "searchBtn": "//button[text()='Search' and @id='defaultActionButton']",
+        "reportMenu": "//span[contains(text(),'Report')]"
+    },
+    "vi": {
+        "tradingMenu": "//span[contains(text(),'Bán hàng')]",
+        "orderFulfilment": "//a[@title='Vận hành']",
+        "createOrderBtn": "//a[@title='Tạo đơn hàng']",
+        "importBtn": "//a[contains(text(),'Phiếu nhập')]",
+        "exportToExcelBtn": "//button[contains(text(),'Xuất ra file Excel')]",
+        "searchBtn": "//button[text()='Tìm kiếm' and @id='defaultActionButton']",
+        "reportMenu": "//span[contains(text(),'Báo cáo')]"
+    }
+}

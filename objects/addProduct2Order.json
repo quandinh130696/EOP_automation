@@ -1,0 +1,41 @@
+{
+    "en": {
+        "tradingMenu": "//span[contains(text(),'Trading')]",
+        "orderFulfilment": "//ul//a[@title='Fulfilment']",
+        "createOrderBtn": "//a[@title='Create order']",
+        "importBtn": "//a[contains(text(),'Import')]",
+        "exportToExcelBtn": "//button[contains(text(),'Export to excel')]",
+        "searchBtn": "//button[text()='Search' and @id='defaultActionButton']",
+        "reportMenu": "//span[contains(text(),'Report')]"
+    },
+    "vi": {
+        "addProductLabel": "//h3[contains(text(),'Thêm sản phẩm')]",
+        "stockLabel": "//label[contains(text(),'Cấu hình kho') and ..//select[@id='order_ship_store_id']]",
+        "stockSelection": "//select[@id='order_ship_store_id']",
+        "vendorSelection": "//select[@id='vendor_id']",
+        "vendorLabel": "//label[contains(text(),'Nhà cung cấp') and ..//select[@id='vendor_id']]",
+        "promoBtn": "//button[contains(text(),'Chương trình khuyến mại')]",
+        "noColumnTitle": "//th[contains(text(),'STT')]",
+        "productNameColumnTitle": "//th[contains(text(),'Sản phẩm')]",
+        "quantityColummnTitle": "//th[contains(text(),'Số lượng')]",
+        "unitPriceColumnTitle": "//th[contains(text(),'Giá bán')]",
+        "discountColumnTitle": "//th[contains(text(),'Giảm giá')]",
+        "subTotalColumnTitle": "//th[contains(text(),'Tổng tiền')]",
+        "actionColumnTitle": "//th[contains(text(),'Hành động')]",
+        "orderProductInputField": "//input[@id='add_item_product_id']",
+        "quantityInputField": "//input[@name='add_item_number_add']",
+        "discountItemsField": "//input[@name='order_item_discount']",
+        "labelByText": {
+            "stock_labelByText": "Cấu hình kho",
+            "addProductHeader": "Thêm sản phẩm",
+            "vendor_labelByText": "Nhà cung cấp",
+            "numberColumnTitle_ByText": "STT",
+            "productNameColumnTitle_ByText": "Sản phẩm",
+            "quantityColummnTitle_ByText": "Số lượng",
+            "unitPriceColumnTitle_ByText": "Giá bán",
+            "discountColumnTitle_ByText": "Giảm giá",
+            "subTotalColumnTitle_ByText": "Tổng tiền",
+            "actionColumnTitle_ByText": "Hành động"
+        }
+    }
+}

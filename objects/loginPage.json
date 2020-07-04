@@ -1,0 +1,10 @@
+{
+    "eopLogo": "//img[@id='logo-img']",
+    "emailLabel": "//h5[contains(text(),'Email')]",
+    "emailField": "//input[@id='email']",
+    "passwordLabel": "//h5[contains(text(),'Mật khẩu')]",
+    "passwordField": "//input[@id='password']",
+    "loginBtn": "//button[@class='btn btn-block btn-primary submit']",
+    "email": "quannd@ecomobi.com",
+    "password": "Plan@2020"
+}

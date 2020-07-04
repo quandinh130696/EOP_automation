@@ -1,0 +1,27 @@
+{
+    "loginData": {
+        "email": "quannd@ecomobi.com",
+        "password": "Plan@2020"
+    },
+    "orderInputData": {
+        "phone": "0339389160",
+        "cusName": "Nguyen Dinh Quan",
+        "nation": "VietNam",
+        "options": "//div[@class='select2-result-label'",
+        "selectionInputField": "//input[@type='text' and ../..//div[@class='select2-result-label'",
+        "andText": "and contains(text(),'",
+        "andSpanText": "and span[contains(text(),'",
+        "closeText": "')]",
+        "province": "Hà Nội",
+        "district": "Hai Bà Trưng",
+        "address": "37 Nguyen Van Huong",
+        "adminNote": "quan test, khong giao",
+        "orderReason": "Create manually",
+        "reasonDetails": "quan test, khong giao",
+        "source": "Chatbot",
+        "vendor": "Halo Store",
+        "inluencer": "Nguyễn Minh Đức",
+        "fanpage": "Bán Game Hutech",
+        "selectedWarehouse": "Hà Nội (Định công)"
+    }
+}

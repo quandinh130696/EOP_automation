@@ -1,0 +1,21 @@
+{
+  "name": "EOP_codecept",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:e2e": "rm -rf ./output/* & ./node_modules/.bin/codeceptjs run --plugins allure --steps",
+    "test:report": "allure serve ./output"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^2.3.6"
+  },
+  "devDependencies": {
+    "@wdio/selenium-standalone-service": "^5.16.10",
+    "webdriverio": "^5.23.0"
+  }
+}
