@@ -183,6 +183,8 @@ module.exports = function () {
             )
             this.wait(1)
 
+            this.scrollPageToBottom()
+
             this.click(orderCreate.vi.saveBtn)
 
             // Validate turn to Step 2 successfully

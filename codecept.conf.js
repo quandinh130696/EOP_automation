@@ -23,7 +23,7 @@ exports.config = {
       desiredCapabilities: {
         chromeOptions: {
           args: ["--no-sandbox", "--headless", '--window-size=1600,900']
-          // args: ["--disable-gpu", "--no-sandbox"]
+          // args: ["--disable-gpu", "--no-sandbox", '--window-size=1600,900']
         }
       }
     },
