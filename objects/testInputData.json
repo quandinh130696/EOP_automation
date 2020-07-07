@@ -5,7 +5,7 @@
     },
     "orderInputData": {
         "phone": "0339389160",
-        "cusName": "Nguyen Dinh Quan",
+        "cusName": "Nguyễn Đình Quân",
         "nation": "VietNam",
         "options": "//div[@class='select2-result-label'",
         "selectionInputField": "//input[@type='text' and ../..//div[@class='select2-result-label'",

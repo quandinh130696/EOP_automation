@@ -27,6 +27,8 @@
         "discountItemsField": "//input[@name='order_item_discount']",
         "addOrderItemsBtn": "//button[@id='btnAddProduct']",
         "itemsAdded": "//td[contains(text(),",
+        "shippingFeeField": "//input[@name='newOd[order_fee]']",
+        "saveBtn": "//button[@id='button_submit_order_product']",
         "labelByText": {
             "stock_labelByText": "Cấu hình kho",
             "addProductHeader": "Thêm sản phẩm",

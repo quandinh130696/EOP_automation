@@ -1,5 +1,6 @@
 const orderCreate = require('../objects/orderFulfilmentCreateForm.json')
 const timeWait = require('../wait_config/wait_config.json')
+var commonFunction = require('../common/commonFunction.js')
 
 module.exports = function () {
     return actor({
@@ -41,8 +42,8 @@ module.exports = function () {
         },
 
         orderCreation: async function () {
-            this.fillField(orderCreate.vi.orderPhoneField, orderCreate.orderInput.phone)
-            this.fillField(orderCreate.vi.fullNameField, orderCreate.orderInput.cusName)
+           await this.fillField(orderCreate.vi.orderPhoneField, orderCreate.orderInput.phone)
+           await this.fillField(orderCreate.vi.fullNameField, orderCreate.orderInput.cusName)
 
             // Select Nation
             this.click(orderCreate.vi.nationSelection)
@@ -102,7 +103,6 @@ module.exports = function () {
                 + orderCreate.orderInput.closeText + "]"
             )
             this.wait(1)
-
             this.fillField(orderCreate.vi.orderAddressField, orderCreate.orderInput.address)
             this.fillField(orderCreate.vi.adminNoteField, orderCreate.orderInput.adminNote)
 
@@ -121,7 +121,6 @@ module.exports = function () {
                 + orderCreate.orderInput.closeText
             )
             this.wait(1)
-
             this.fillField(orderCreate.vi.reasonDetailsField, orderCreate.orderInput.reasonDetails)
 
             // Select Order Source
@@ -182,14 +181,17 @@ module.exports = function () {
                 + orderCreate.orderInput.closeText
             )
             this.wait(1)
-
             this.scrollPageToBottom()
-
             this.click(orderCreate.vi.saveBtn)
 
             // Validate turn to Step 2 successfully
             this.waitForElement(orderCreate.vi.turnToStep2, timeWait.waitFor10s)
             this.see(orderCreate.vi.labelByText.turnToStep2_labelByText, orderCreate.vi.turnToStep2)
+            let titleWithOrderId = await this.grabTextFrom(orderCreate.vi.titleWithOrderId);
+            titleWithOrderId = commonFunction.getOrderId(titleWithOrderId)
+
+            return titleWithOrderId
         }
     });
+    
 }

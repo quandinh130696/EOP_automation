@@ -85,6 +85,7 @@
         "paymentMethodField": "//select[@id='order_payment_method']",
         "saveBtn": "//button[contains(text(), 'Tiếp tục')]",
         "turnToStep2": "//li[contains(text(),'Bước 2: thêm sản phẩm vào đơn hàng')]",
+        "titleWithOrderId": "//a[contains(text(),'Mã đơn hàng')]",
         "labelByText": {
             "phone_labelByText": "Điện thoại",
             "fullName_labelByText": "Họ tên",

@@ -17,7 +17,6 @@ module.exports = function() {
       this.waitForElement(loginObs.passwordField, timeWait.waitFor10s)
       this.fillField(loginObs.emailField, username)
       this.fillField(loginObs.passwordField, password)
-
       this.waitForClickable(loginObs.loginBtn, timeWait.waitFor10s)
       this.click(loginObs.loginBtn)
       this.dontSeeElement("//div[@class='alert alert-danger']")

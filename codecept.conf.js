@@ -42,6 +42,7 @@ exports.config = {
     OrderAccess: './test_step/orderFulfilment.js',
     OrderCreate: './test_step/orderCreate.js',
     OrderAddProduct: './test_step/addProduct2Order.js',
+    CreatedOrder: './test_step/validateCreatedOrder.js',
   },
   bootstrap: null,
   mocha: {},
