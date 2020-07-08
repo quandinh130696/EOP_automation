@@ -12,10 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "codeceptjs": "^2.3.6"
+    "@wdio/browserstack-service": "^6.1.15"
   },
   "devDependencies": {
     "@wdio/selenium-standalone-service": "^5.16.10",
+    "codeceptjs": "^2.6.6",
+    "selenium-standalone": "^6.16.0",
     "webdriverio": "^5.23.0"
   }
 }

@@ -85,6 +85,7 @@ module.exports = function () {
       totalOrder = await commonFunction.numberFormat(subTotalItems + shippingFee)
       let subtotalOrderObj = `//td[text()='${totalOrder}']`;
       this.see(totalOrder, subtotalOrderObj)
+      this.scrollPageToBottom()
       this.click(addProduct2OrderObs.vi.saveBtn)
 
       subTotalItems = await commonFunction.numberFormat(subTotalItems)

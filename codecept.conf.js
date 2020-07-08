@@ -1,13 +1,26 @@
 const { setHeadlessWhen, setWindowSize } = require('@codeceptjs/configure');
-
+const BASEURL = "https://dev-eop.ecomobi.com"
 setHeadlessWhen(process.env.HEADLESS); // enables headless mode when HEADLESS environment variable exists
+const fs = require('fs');
+
+// create environment properties for Test Report
+if (BASEURL === "https://dev-eop.ecomobi.com") {
+  fs.copyFile('./environment_properties/dev_environment.properties', './output/environment.properties', (err) => {
+    if (err) throw err;
+  });
+} 
+else if (BASEURL === "https://eop.staging.ecomobi.com"){
+  fs.copyFile('./environment_properties/stage_environment.properties', './output/environment.properties', (err) => {
+    if (err) throw err;
+  });
+}
 
 exports.config = {
   tests: './test_e2e/*_test.js',
   output: './output',
   helpers: {
     WebDriver: {
-      url: 'https://dev-eop.ecomobi.com',
+      url: `${BASEURL}`,
       browser: 'chrome',
       host: '127.0.0.1',
       port: 4444,
@@ -22,8 +35,8 @@ exports.config = {
       uniqueScreenshotNames: true,
       desiredCapabilities: {
         chromeOptions: {
-          args: ["--no-sandbox", "--headless", '--window-size=1600,900']
-          // args: ["--disable-gpu", "--no-sandbox", '--window-size=1600,900']
+          // args: ["--no-sandbox", "--headless", '--window-size=1600,900']
+          args: ["--disable-gpu", "--no-sandbox", '--window-size=1600,900']
         }
       }
     },
