@@ -22,21 +22,21 @@
         "vendor": "Halo Store",
         "inluencer": "Nguyễn Minh Đức",
         "fanpage": "Bán Game Hutech",
-        "selectedWarehouse": "Hà Nội (Định công)",
+        "selectedWarehouse": "Hà Nội (01 Thái Hà, Hà Nội (New))",
         "orderItems": [
             {
-                "odooProduct_id": 20056,
-                "name": "iphone for retest2",
-                "unitPrice": 300000,
+                "odooProduct_id": 24397,
+                "name": "Xwash Nước Ion kiềm tẩy rửa nhà bếp",
+                "unitPrice": 99000,
                 "quantity": 2,
-                "productSelector": "'iphone for retest2')]"
+                "productSelector": "'Xwash Nước Ion kiềm tẩy rửa nhà bếp')]"
             },
             {
-                "odooProduct_id": 20057,
-                "name": "iphone for retest3 edit",
-                "unitPrice": 250000,
+                "odooProduct_id": 24395,
+                "name": "Xwash Nước Ion kiềm tẩy rửa nội thất oto",
+                "unitPrice": 179000,
                 "quantity": 2,
-                "productSelector": "'iphone for retest3')]"
+                "productSelector": "'Xwash Nước Ion kiềm tẩy rửa nội thất oto')]"
             }
         ],
         "productSelection": "//li[contains(text(),"

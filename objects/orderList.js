@@ -20,6 +20,28 @@ var vi = {
     }
 }
 
+var en = {
+    orderGeneralColumnTitle: "//th[contains(text(),'Order')]",
+    statusOrderColumnTitle: "//th[contains(text(),'Status')]",
+    orderProductColumnTitle: "//th[contains(text(),'Product')]",
+    orderAddressColumnTitle: "//th[contains(text(),'Shipping')]",
+    orderTotalColumnTitle: "//th[contains(text(),'Total')]",
+    comOrderColumnTitle: "//th[contains(text(),'Commission')]",
+    chanenlColumnTitle: "//th[contains(text(),'Channel')]",
+    actionColumnTitle: "//th[contains(text(),'Actions')]",
+    orderStatus: "Confirmed",
+    labelByText: {
+        orderGeneralColumnTitle_labelByText: "Order",
+        statusOrderColumnTitle_labelByText: "Status",
+        orderProductColumnTitle_labelByText: "Product",
+        orderAddressColumnTitle_labelByText: "Shipping",
+        orderTotalColumnTitle_labelByText: "Total",
+        comOrderColumnTitle_labelByText: "Commission",
+        chanenlColumnTitle_labelByText: "Channel",
+        actionColumnTitle_labelByText: "Actions"
+    }
+}
+
 function orderValidate(orderID, status, itemName, subtotal, vendor, street, district, total) {
     var orderInfor = {
         orderId: `//b[contains(text(),'${orderID}')]`,
@@ -38,6 +60,7 @@ function orderValidate(orderID, status, itemName, subtotal, vendor, street, dist
 }
 module.exports = {
     vi,
+    en,
     orderValidate
 }
 

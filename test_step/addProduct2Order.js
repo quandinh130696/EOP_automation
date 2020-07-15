@@ -10,45 +10,45 @@ let shippingFee = 0
 module.exports = function () {
   return actor({
 
-    addProductFieldsisVisible: function () {
-      this.waitForElement(addProduct2OrderObs.vi.addProductLabel, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.addProductHeader, addProduct2OrderObs.vi.addProductLabel)
-      this.waitForElement(addProduct2OrderObs.vi.stockLabel, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.stock_labelByText, addProduct2OrderObs.vi.stockLabel)
-      this.waitForElement(addProduct2OrderObs.vi.stockSelection, timeWait.waitFor10s)
-      this.see(testData.orderInputData.selectedWarehouse, addProduct2OrderObs.vi.stockSelection)
-      this.waitForElement(addProduct2OrderObs.vi.vendorLabel, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.vendor_labelByText, addProduct2OrderObs.vi.vendorLabel)
-      this.waitForElement(addProduct2OrderObs.vi.vendorSelection, timeWait.waitFor10s)
-      this.see(testData.orderInputData.vendor, addProduct2OrderObs.vi.vendorSelection)
-      this.waitForElement(addProduct2OrderObs.vi.promoBtn, timeWait.waitFor10s)
-      this.seeElement(addProduct2OrderObs.vi.promoBtn)
-      this.waitForElement(addProduct2OrderObs.vi.noColumnTitle, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.numberColumnTitle_ByText, addProduct2OrderObs.vi.noColumnTitle)
-      this.waitForElement(addProduct2OrderObs.vi.productNameColumnTitle, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.productNameColumnTitle_ByText, addProduct2OrderObs.vi.productNameColumnTitle)
-      this.waitForElement(addProduct2OrderObs.vi.quantityColummnTitle, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.quantityColummnTitle_ByText, addProduct2OrderObs.vi.quantityColummnTitle)
-      this.waitForElement(addProduct2OrderObs.vi.unitPriceColumnTitle, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.unitPriceColumnTitle_ByText, addProduct2OrderObs.vi.unitPriceColumnTitle)
-      this.waitForElement(addProduct2OrderObs.vi.discountColumnTitle, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.discountColumnTitle_ByText, addProduct2OrderObs.vi.discountColumnTitle)
-      this.waitForElement(addProduct2OrderObs.vi.subTotalColumnTitle, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.subTotalColumnTitle_ByText, addProduct2OrderObs.vi.subTotalColumnTitle)
-      this.waitForElement(addProduct2OrderObs.vi.actionColumnTitle, timeWait.waitFor10s)
-      this.see(addProduct2OrderObs.vi.labelByText.actionColumnTitle_ByText, addProduct2OrderObs.vi.actionColumnTitle)
+    addProductFieldsisVisible: function (lang) {
+      this.waitForElement(addProduct2OrderObs[lang].addProductLabel, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.addProductHeader, addProduct2OrderObs[lang].addProductLabel)
+      this.waitForElement(addProduct2OrderObs[lang].stockLabel, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.stock_labelByText, addProduct2OrderObs[lang].stockLabel)
+      this.waitForElement(addProduct2OrderObs[lang].stockSelection, timeWait.waitFor10s)
+      this.see(testData.orderInputData.selectedWarehouse, addProduct2OrderObs[lang].stockSelection)
+      this.waitForElement(addProduct2OrderObs[lang].vendorLabel, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.vendor_labelByText, addProduct2OrderObs[lang].vendorLabel)
+      this.waitForElement(addProduct2OrderObs[lang].vendorSelection, timeWait.waitFor10s)
+      this.see(testData.orderInputData.vendor, addProduct2OrderObs[lang].vendorSelection)
+      this.waitForElement(addProduct2OrderObs[lang].promoBtn, timeWait.waitFor10s)
+      this.seeElement(addProduct2OrderObs[lang].promoBtn)
+      this.waitForElement(addProduct2OrderObs[lang].noColumnTitle, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.numberColumnTitle_ByText, addProduct2OrderObs[lang].noColumnTitle)
+      this.waitForElement(addProduct2OrderObs[lang].productNameColumnTitle, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.productNameColumnTitle_ByText, addProduct2OrderObs[lang].productNameColumnTitle)
+      this.waitForElement(addProduct2OrderObs[lang].quantityColummnTitle, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.quantityColummnTitle_ByText, addProduct2OrderObs[lang].quantityColummnTitle)
+      this.waitForElement(addProduct2OrderObs[lang].unitPriceColumnTitle, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.unitPriceColumnTitle_ByText, addProduct2OrderObs[lang].unitPriceColumnTitle)
+      this.waitForElement(addProduct2OrderObs[lang].discountColumnTitle, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.discountColumnTitle_ByText, addProduct2OrderObs[lang].discountColumnTitle)
+      this.waitForElement(addProduct2OrderObs[lang].subTotalColumnTitle, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.subTotalColumnTitle_ByText, addProduct2OrderObs[lang].subTotalColumnTitle)
+      this.waitForElement(addProduct2OrderObs[lang].actionColumnTitle, timeWait.waitFor10s)
+      this.see(addProduct2OrderObs[lang].labelByText.actionColumnTitle_ByText, addProduct2OrderObs[lang].actionColumnTitle)
     },
 
-    addProductsToOrder: async function () {
+    addProductsToOrder: async function (lang) {
       let i;
       for (i = 0; i < testData.orderInputData.orderItems.length; i++) {
         // Added products and quantity: 2 to the order
         var subtotalPerItem = testData.orderInputData.orderItems[i].unitPrice * testData.orderInputData.orderItems[i].quantity
         subTotalItems += subtotalPerItem;
         subtotalPerItem = await commonFunction.numberFormat(subtotalPerItem)
-        var subTotalItemsObs = `//td[contains(text(),'${subtotalPerItem}') and ..${addProduct2OrderObs.vi.itemsAdded} ${testData.orderInputData.orderItems[i].productSelector}]`
-        this.waitForElement(addProduct2OrderObs.vi.orderProductInputField, timeWait.waitFor10s)
-        this.fillField(addProduct2OrderObs.vi.orderProductInputField, testData.orderInputData.orderItems[i].odooProduct_id)
+        var subTotalItemsObs = `//td[contains(text(),'${subtotalPerItem}') and ..${addProduct2OrderObs[lang].itemsAdded} ${testData.orderInputData.orderItems[i].productSelector}]`
+        this.waitForElement(addProduct2OrderObs[lang].orderProductInputField, timeWait.waitFor10s)
+        this.fillField(addProduct2OrderObs[lang].orderProductInputField, testData.orderInputData.orderItems[i].odooProduct_id)
         this.waitForElement(
           testData.orderInputData.productSelection
           + testData.orderInputData.orderItems[i].productSelector,
@@ -57,21 +57,21 @@ module.exports = function () {
           testData.orderInputData.productSelection
           + testData.orderInputData.orderItems[i].productSelector
         )
-        this.seeInField(addProduct2OrderObs.vi.orderProductInputField, testData.orderInputData.orderItems[i].name)
-        this.waitForElement(addProduct2OrderObs.vi.quantityInputField, timeWait.waitFor10s)
-        this.fillField(addProduct2OrderObs.vi.quantityInputField, testData.orderInputData.orderItems[i].quantity)
+        this.seeInField(addProduct2OrderObs[lang].orderProductInputField, testData.orderInputData.orderItems[i].name)
+        this.waitForElement(addProduct2OrderObs[lang].quantityInputField, timeWait.waitFor10s)
+        this.fillField(addProduct2OrderObs[lang].quantityInputField, testData.orderInputData.orderItems[i].quantity)
         this.wait(1)
-        this.waitForElement(addProduct2OrderObs.vi.addOrderItemsBtn, timeWait.waitFor10s)
-        this.click(addProduct2OrderObs.vi.addOrderItemsBtn)
+        this.waitForElement(addProduct2OrderObs[lang].addOrderItemsBtn, timeWait.waitFor10s)
+        this.click(addProduct2OrderObs[lang].addOrderItemsBtn)
 
         // Check the 1st product has successfully added
         this.waitForElement(
-          addProduct2OrderObs.vi.itemsAdded
+          addProduct2OrderObs[lang].itemsAdded
           + testData.orderInputData.orderItems[i].productSelector,
           timeWait.waitFor10s)
         this.see(
           `[${testData.orderInputData.orderItems[i].odooProduct_id}] ${testData.orderInputData.orderItems[i].name}`,
-          addProduct2OrderObs.vi.itemsAdded
+          addProduct2OrderObs[lang].itemsAdded
           + testData.orderInputData.orderItems[i].productSelector)
 
         // Check Subtotal of Items
@@ -80,13 +80,13 @@ module.exports = function () {
       }
 
       // Check the totalPayment of order 
-      this.waitForElement(addProduct2OrderObs.vi.shippingFeeField, timeWait.waitFor10s)
-      shippingFee = parseInt(await this.grabValueFrom(addProduct2OrderObs.vi.shippingFeeField));
+      this.waitForElement(addProduct2OrderObs[lang].shippingFeeField, timeWait.waitFor10s)
+      shippingFee = parseInt(await this.grabValueFrom(addProduct2OrderObs[lang].shippingFeeField));
       totalOrder = await commonFunction.numberFormat(subTotalItems + shippingFee)
       let subtotalOrderObj = `//td[text()='${totalOrder}']`;
       this.see(totalOrder, subtotalOrderObj)
       this.scrollPageToBottom()
-      this.click(addProduct2OrderObs.vi.saveBtn)
+      this.click(addProduct2OrderObs[lang].saveBtn)
 
       subTotalItems = await commonFunction.numberFormat(subTotalItems)
 

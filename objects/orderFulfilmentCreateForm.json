@@ -34,8 +34,8 @@
         "reasonDetailsLabel": "//label[contains(text(),'Reason detail') and ..//textarea[@id='order_reason_detail']]",
         "orderSourceLabel": "//label[contains(text(),'Source') and ..//div[@id='s2id_source_create_order']//a[@class='select2-choice']]",
         "orderVendorLabel": "//label[contains(text(),'Vendor') and ..//div[@id='s2id_vendor_id']//a[@class='select2-choice']]",
-        "orderInluencerLabel": "//label[contains(text(),'Inluencers') and ..//div[@id='s2id_publisher_id']//a[@class='select2-choice']]",
-        "orderFanpageLabel": "//label[contains(text(),'Fanpage') and ..//div[@id='s2id_page_id']//a[@class='select2-choice']",
+        "orderInluencerLabel": "//label[contains(text(),'Influencers') and ..//div[@id='s2id_publisher_id']//a[@class='select2-choice']]",
+        "orderFanpageLabel": "//label[contains(text(),'Fanpage') and ..//div[@id='s2id_page_id']//a[@class='select2-choice']]",
         "orderFanpageField": "//div[@id='s2id_page_id']//a[@class='select2-choice']",
         "prePaidField": "//input[@name='ship[order_paid]']",
         "orderReasonField": "//div[@id='s2id_order_reason']//a[@class='select2-choice']",
@@ -51,8 +51,25 @@
         "nationInputField": "//div[@id='s2id_geo_country_id']//input",
         "provinceInputField": "//div[@id='s2id_geo_province_id']//input",
         "districtInputField": "//div[@id='s2id_geo_district_id']//input",
-        "saveBtn": "//button[contains(text(), 'Save')]",
-        "turnToStep2": "Step2: Add products"
+        "saveBtn": "//button[contains(text(), 'Next')]",
+        "turnToStep2": "//li[contains(text(),'Step2: Add products')]",
+        "titleWithOrderId": "//a[contains(text(),'Order Id')]",
+        "labelByText": {
+            "phone_labelByText": "Customer phone",
+            "fullName_labelByText": "Full name",
+            "nation_labelByText": "Country",
+            "address_labelByText": "Address",
+            "adminNote_labelByText": "Delivery note",
+            "paymentMethod_labelByText": "Payment method",
+            "prePaid_labelByText": "Pre paid",
+            "orderReason_labelByText": "Reason",
+            "reasonDetails_labelByText": "Reason detail",
+            "orderSource_labelByText": "Source",
+            "vendor_labelByText": "Vendor",
+            "inluencer_labelByText": "Influencers",
+            "fanpage_labelByText": "Fanpage",
+            "turnToStep2_labelByText": "Step2: Add products"
+        }
     },
     "vi": {
         "phoneLabel": "//label[contains(text(),'Điện thoại') and ..//input[@id='order_ship_phone']]",

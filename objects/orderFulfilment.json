@@ -1,12 +1,21 @@
 {
     "en": {
         "tradingMenu": "//span[contains(text(),'Trading')]",
-        "orderFulfilment": "//ul//a[@title='Fulfilment']",
+        "orderFulfilment": "//ul//a[@title='Fulfillment']",
         "createOrderBtn": "//a[@title='Create order']",
         "importBtn": "//a[contains(text(),'Import')]",
         "exportToExcelBtn": "//button[contains(text(),'Export to excel')]",
         "searchBtn": "//button[text()='Search' and @id='defaultActionButton']",
-        "reportMenu": "//span[contains(text(),'Report')]"
+        "reportMenu": "//span[contains(text(),'Report')]",
+        "buttonByText": {
+            "trading_buttonByText": "Trading",
+            "orderFulfilment_buttonByText": "Fulfillment",
+            "createOrderBtn_buttonByText": "Create order",
+            "importBtn_buttonByText": "Import",
+            "exportToExcelBtn_buttonByText": "Export to excel",
+            "searchBtn_buttonByText": "Search",
+            "reportMenu_buttonByText": "Report"
+        }
     },
     "vi": {
         "tradingMenu": "//span[contains(text(),'Bán hàng')]",
@@ -15,6 +24,15 @@
         "importBtn": "//a[contains(text(),'Phiếu nhập')]",
         "exportToExcelBtn": "//button[contains(text(),'Xuất ra file Excel')]",
         "searchBtn": "//button[text()='Tìm kiếm' and @id='defaultActionButton']",
-        "reportMenu": "//span[contains(text(),'Báo cáo')]"
+        "reportMenu": "//span[contains(text(),'Báo cáo')]",
+        "buttonByText": {
+            "trading_buttonByText": "Bán hàng",
+            "orderFulfilment_buttonByText": "Vận hành",
+            "createOrderBtn_buttonByText": "Tạo đơn hàng",
+            "importBtn_buttonByText": "Phiếu nhập",
+            "exportToExcelBtn_buttonByText": "Xuất ra file Excel",
+            "searchBtn_buttonByText": "Tìm kiếm",
+            "reportMenu_buttonByText": "Báo cáo"
+        }
     }
 }

@@ -1,5 +1,5 @@
 const { setHeadlessWhen, setWindowSize } = require('@codeceptjs/configure');
-const BASEURL = "https://dev-eop.ecomobi.com"
+const BASEURL = "https://eop.staging.ecomobi.com"
 setHeadlessWhen(process.env.HEADLESS); // enables headless mode when HEADLESS environment variable exists
 const fs = require('fs');
 
@@ -35,8 +35,8 @@ exports.config = {
       uniqueScreenshotNames: true,
       desiredCapabilities: {
         chromeOptions: {
-          // args: ["--no-sandbox", "--headless", '--window-size=1600,900']
-          args: ["--disable-gpu", "--no-sandbox", '--window-size=1600,900']
+          args: ["--no-sandbox", "--headless", '--window-size=1600,900']
+          // args: ["--disable-gpu", "--no-sandbox", '--window-size=1600,900']
         }
       }
     },

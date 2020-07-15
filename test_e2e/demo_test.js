@@ -1,33 +1,33 @@
 const loginPage = require('../objects/loginPage.json')
 
-let orderID
-let orderAddProduct
-
+let orderID, orderAddProduct, langCheckWhileLogin, orderCreated
 
 Feature("EOP Automation tests");
 
-BeforeSuite((I) => {
-    I.login(loginPage.email, loginPage.password)
+BeforeSuite(async (I) => {
+    langCheckWhileLogin = await I.login(loginPage.email, loginPage.password)
 });
 
 Scenario("Order Fulfilment Accessing", async (I, OrderAccess) => {
-    OrderAccess.orderFulfilmentAccess()
+    OrderAccess.orderFulfilmentAccess(langCheckWhileLogin)
 })
 
 Scenario("Order Creation", async (I, OrderCreate) => {
-    OrderCreate.fieldsVisible()
-    orderID = await OrderCreate.orderCreation()
+    await OrderCreate.fieldsVisible(langCheckWhileLogin)
+    orderCreated = await OrderCreate.orderCreation(langCheckWhileLogin)
+    console.log(orderCreated)
+    console.log(orderCreated.cusName.toString())
+    orderCreated.titleWithOrderId.then(x => orderID = x) 
 })
 
 Scenario("Add Product to Order", async (I, OrderAddProduct) => {
-    OrderAddProduct.addProductFieldsisVisible()
-    orderAddProduct = await OrderAddProduct.addProductsToOrder()
-    console.log(orderAddProduct)
+    OrderAddProduct.addProductFieldsisVisible(langCheckWhileLogin)
+    orderAddProduct = await OrderAddProduct.addProductsToOrder(langCheckWhileLogin)
 })
 
 Scenario("Validate Order Created", (I, CreatedOrder) => {
-    CreatedOrder.orderCreatedColumnsVisible()
-    CreatedOrder.validateOrderCreated(orderID, orderAddProduct.subTotalItems, orderAddProduct.totalOrder)
+    CreatedOrder.orderCreatedColumnsVisible(langCheckWhileLogin)
+    CreatedOrder.validateOrderCreated(orderID, orderAddProduct.subTotalItems, orderAddProduct.totalOrder, langCheckWhileLogin, orderCreated.cusName.toString())
 })
 
 AfterSuite((I) => {
