@@ -56,6 +56,7 @@ exports.config = {
     OrderCreate: './test_step/orderCreate.js',
     OrderAddProduct: './test_step/addProduct2Order.js',
     CreatedOrder: './test_step/validateCreatedOrder.js',
+    ClionaCreatedOrder: './test_step/clionaOrder.js',
   },
   bootstrap: null,
   mocha: {},
