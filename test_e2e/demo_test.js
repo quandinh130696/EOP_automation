@@ -31,7 +31,8 @@ Feature("EOP Automation tests");
 // })
 
 Scenario("Cliona Order Created", async (I, ClionaCreatedOrder) => {
-   await ClionaCreatedOrder.orderClionaCreated()
+   await ClionaCreatedOrder.orderClionaAccess()
+   await ClionaCreatedOrder.orderClionaInputInfor()
 })
 
 // AfterSuite((I) => {
