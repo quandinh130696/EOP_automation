@@ -32,6 +32,7 @@ module.exports = function () {
             // validate number of headerCartCount -> click to headerCartCount
             this.waitForElement(clionaObj.clionaPage.cart, timeWait.waitFor10s)
             this.waitForElement(clionaObj.clionaOrder().clionaOrderInfor.headerCartCount, timeWait.waitFor10s)
+            this.wait(1)
             this.see(clionaObj.productInfor.quantity, clionaObj.clionaOrder().clionaOrderInfor.headerCartCount)
             this.waitForClickable(clionaObj.clionaPage.cart, timeWait.waitFor10s)
             this.click(clionaObj.clionaPage.cart)
